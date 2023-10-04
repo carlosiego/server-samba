@@ -10,7 +10,7 @@ if (process.platform === 'linux') {
 } else {
 	app.use('/files', express.static(path.resolve(__dirname, "..", "public", "upload")))
 }
-console.log(path.resolve("\\", "home", "HD3", "Imagens-Produtos"))
+console.log(path.resolve("/", "home", "HD3", "Imagens-Produtos"))
 app.use(express.json())
 
 app.use((req, res, next) => {
