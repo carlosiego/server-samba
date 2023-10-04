@@ -9,7 +9,7 @@ class imagesProductsController {
         const nameImage = code + '.png'
         let directory;
         if(process.platform === 'linux') {
-            directory = path.resolve('home', "HD3", "Imagens-Produtos")
+            directory = path.resolve("/", "home", "HD3", "Imagens-Produtos")
         }else {
             directory = path.resolve(__dirname, "..", "..", "public", "upload")
         }
