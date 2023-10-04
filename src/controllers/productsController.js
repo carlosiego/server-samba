@@ -19,7 +19,7 @@ class imagesProductsController {
             if (err) {
                 res.json({
                     error: true,
-                    urlImage: `http://${process.env.SERVER_ADRESS}:${process.env.PORT}/files/not-found.png`,
+                    urlImage: `http://${process.env.SERVER_ADDRESS}:${process.env.PORT}/files/not-found.png`,
                 })
             } else {
                 res.json({
