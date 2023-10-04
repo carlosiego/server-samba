@@ -22,5 +22,5 @@ app.use((req, res, next) => {
 routes(app)
 
 app.listen(process.env.PORT, () => {
-  console.log(`Servidor escutando em http://${process.env.SERVER_ADRESS}:${process.env.PORT}`)
+  console.log(`Servidor escutando em http://${process.env.SERVER_ADDRESS}:${process.env.PORT}`)
 })
