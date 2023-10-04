@@ -24,7 +24,7 @@ class imagesProductsController {
             } else {
                 res.json({
                     error: false,
-                    urlImage: `http://${process.env.SERVER_ADRESS}:${process.env.PORT}/files/${nameImage}`,
+                    urlImage: `http://${process.env.SERVER_ADDRESS}:${process.env.PORT}/files/${nameImage}`,
                 })
             }
         })
