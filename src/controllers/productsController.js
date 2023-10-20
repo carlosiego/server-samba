@@ -27,7 +27,7 @@ class imagesProductsController {
                         error: true,
                         urlImage: `http://${process.env.SERVER_ADDRESS}:${process.env.PORT}/files/not-found.png`,
                     }
-                ))
+                ), { EX: process.env.EXPIRATION})
                 res.json({
                     error: true,
                     urlImage: `http://${process.env.SERVER_ADDRESS}:${process.env.PORT}/files/not-found.png`,
@@ -38,7 +38,7 @@ class imagesProductsController {
                         error: false,
                         urlImage: `http://${process.env.SERVER_ADDRESS}:${process.env.PORT}/files/${nameImage}`,
                     }
-                ))
+                ), { EX: process.env.EXPIRATION})
                 res.json({
                     error: false,
                     urlImage: `http://${process.env.SERVER_ADDRESS}:${process.env.PORT}/files/${nameImage}`,
