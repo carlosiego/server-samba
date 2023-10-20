@@ -4,7 +4,6 @@ const routes = require('./routes/index.js')
 const path = require('path')
 const app = express()
 
-
 if (process.platform === 'linux') {
 	app.use('/files', express.static(path.resolve("/", "HD3", "Imagens-Produtos")))
 } else {
@@ -21,7 +20,6 @@ app.use((req, res, next) => {
 });
 
 routes(app)
-
 
 app.listen(process.env.PORT, () => {
 	console.log(`Servidor escutando em http://${process.env.SERVER_ADDRESS}:${process.env.PORT}`)
