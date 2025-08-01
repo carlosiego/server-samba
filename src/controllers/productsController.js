@@ -20,10 +20,7 @@ class imagesProductsController {
             directory = path.resolve(__dirname, "..", "..", "public", "upload")
         }
         const pathFile = path.join(directory, nameImage)
-<<<<<<< HEAD
-
-=======
->>>>>>> 9cbe04ad9648f8157a767f43fadee12dbb47e01f
+        
         fs.access(pathFile, fs.constants.F_OK, async (err) => {
             if (err) {
                 await client.set(fullUrl, JSON.stringify(
