@@ -5,6 +5,7 @@ const path = require('path')
 const app = express()
 
 if (process.platform === 'linux') {
+	console.log('files: ', path.resolve("/", process.env.HD, process.env.DIRNAME))
 	app.use('/files', express.static(path.resolve("/", process.env.HD, process.env.DIRNAME)))
 } else {
 	app.use('/files', express.static(path.resolve(__dirname, "..", "public", "upload")))
