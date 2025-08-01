@@ -9,13 +9,13 @@ class imagesProductsController {
         const nameImage = code + '.png'
         let directory;
         if(process.platform === 'linux') {
-            directory = path.resolve("/", "HD3", "Imagens-Produtos")
+            directory = path.resolve("/", process.env.HD, process.env.DIRNAME)
         }else {
             directory = path.resolve(__dirname, "..", "..", "public", "upload")
         }
         const pathFile = path.join(directory, nameImage)
 
-        fs.access(pathFile, fs.constants.F_OK, (err) => {
+        fs.access(pathFile, fs.constants.F_OK, async (err) => {
             if (err) {
                 res.json({
                     error: true,
