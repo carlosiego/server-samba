@@ -3,7 +3,7 @@ const path = require('path')
 
 class imagesProductsController {
 
-    static getImageProducts = async (req, res) => {
+    static async getImageProducts(req, res) {
 
         const { code } = req.params 
         const nameImage = code + '.png'
